@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener - Make Your Links Shorter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🔗 URL Shortener</h1>
+            <p>Shorten your long URLs instantly</p>
+        </div>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="form-container">
+            <h2>Welcome Back</h2>
+            <p style="color: #666; margin-bottom: 20px;">Sign in to your account</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            
+            <div class="auth-nav">
+                <p>Don't have an account? <a href="#" id="showSignup" class="auth-link">Sign up here</a></p>
+            </div>
+        </div>
+
+        <!-- Signup Section -->
+        <div id="signupSection" class="form-container" style="display: none;">
+            <h2>Create Account</h2>
+            <p style="color: #666; margin-bottom: 20px;">Join us to start shortening URLs</p>
+            
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="username">Full Name</label>
+                    <input type="text" id="username" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                </div>
+                
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+            
+            <div class="auth-nav">
+                <p>Already have an account? <a href="#" id="showLogin" class="auth-link">Sign in here</a></p>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="form-container" style="display: none;">
+            <div class="welcome-message">
+                <h2 id="userWelcome">Welcome back!</h2>
+            </div>
+            
+            <h3>Shorten a URL</h3>
+            <p style="color: #666; margin-bottom: 20px;">Paste your long URL below to shorten it</p>
+            
+            <form id="urlForm">
+                <div class="form-group">
+                    <label for="longUrl">Enter Long URL</label>
+                    <input type="url" id="longUrl" placeholder="https://example.com/very-long-url" required>
+                </div>
+                
+                <button type="submit" class="btn">Shorten URL</button>
+            </form>
+            
+            <div id="result"></div>
+            
+            <div class="auth-nav">
+                <button id="logoutBtn" class="btn btn-secondary">Sign Out</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
